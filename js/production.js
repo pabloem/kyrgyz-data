@@ -8,6 +8,20 @@ var lang = 'english',
     crop = 'potatoes',
     year = 2014,
     perc = true;
+function parse(val) {
+    var result,
+        tmp = [];
+  location.search
+    //.replace ( "?", "" )
+    .substr(1)
+    .split("&")
+    .forEach(function (item) {
+      tmp = item.split("=");
+      console.log(tmp);
+      if (tmp[0] === val) result = decodeURIComponent(tmp[1]);
+    });
+  return result;
+}
 
 function get_data(item,year,lang,perc) {
   var data = [],
@@ -97,6 +111,7 @@ function toggleMore() {
   });
 }
 $(function () {
+  lang = parse('lang') || 'english';
   plotMap(get_data(crop,year,lang,perc));
   var cnt = 0;
   for(var cr in crops) {
