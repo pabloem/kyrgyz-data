@@ -13,6 +13,10 @@ var title = {
   'english': 'Product: ',
   'russian': 'Производство: '
 };
+var source = {
+  'english': 'Source: Stat. Committee of K.R.',
+  'russian': 'Источник: Статистический Комитет КР'
+};
 function parse(val) {
     var result,
         tmp = [];
@@ -96,6 +100,7 @@ $(function () {
   }
   addMoreButton();
   toggleMore();
+  document.getElementById("citation").innerHTML = source[lang];
   ctx = document.getElementById("container").getContext("2d");
   myLineChart = new Chart(ctx);
   refreshChart(crop,lang,true);

@@ -1,19 +1,26 @@
 #container {
-    height: 500px; 
-    min-width: 310px; 
-    max-width: 800px; 
+    height: 450px;
+    width: 100%; 
     margin: 0;
 }
-#title, #legend {font-family:FreeSans,Arimo,"Droid Sans",Helvetica,Arial,sans-serif;}
-#chart, #legend {
+#citation, #title, #legend, #source {font-family:FreeSans,Arimo,"Droid Sans",Helvetica,Arial,sans-serif;}
+#legend { font-size:x-small; }
+#citation { position: absolute; left: 80%; top: 410px; font-size: small; }
+#source { position: absolute; right: 15px; top: 470px; font-size: small;}
+/*#chart, #legend {
     display: inline-block;
     vertical-align: top;
-}
+}*/
+/*#chart { position: static; max-width: 450px;}
+#legend { position: absolute; top: 120; left: 520px; }
+#buttons { position: static; width: 650;}
 #father {
     min-width: 310px; 
-    max-width: 900px; 
-}
+    max-width: 650px; 
+}*/
+button { height: auto; font-size:small;}
 .line-legend li { list-style-type: none; }
+.line-legend { padding: 10px; }
 .line-legend span {
     display: inline-block;
     width: 12px;

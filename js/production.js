@@ -22,7 +22,10 @@ function parse(val) {
     });
   return result;
 }
-
+var source = {
+  'english': 'Source: Stat. Committee of K.R.',
+  'russian': 'Источник: Статистический Комитет КР'
+};
 function get_data(item,year,lang,perc) {
   var data = [],
       crop, max, sum = 100;
@@ -119,6 +122,7 @@ $(function () {
   }
   addMoreButton();
   toggleMore();
+  document.getElementById("source").innerHTML = source[lang];
   $("#onoffperc").on('change',function() {togglePercentage();});
   $("#range-slider").on("change",function() {
     $("#year-input").val(this.value);
