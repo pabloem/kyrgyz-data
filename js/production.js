@@ -26,7 +26,7 @@ function parse(val) {
 var source = {
   'english': 'Source: Stat. Committee of K.R.',
   'russian': 'Источник: Статистический Комитет КР',
-  'kyrgyz': 'Берилме булагы: КР Улуттук статистика комитети'
+  'kyrgyz': 'Булак: КР Улуттук статистика комитети'
 };
 function get_data(item,year,lang,perc) {
   var data = [],
