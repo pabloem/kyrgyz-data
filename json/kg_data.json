@@ -2,7 +2,7 @@ var kg_data = {
   "more": {
     "russian":"Больше/меньше",
     "english":"More/Less",
-    "kyrgyz":"Kөп/Аз"
+    "kyrgyz":"Kөбөйт/Азайт"
   },
   "units" : {
     "default":{
@@ -1772,7 +1772,7 @@ var kg_data = {
       "russian": "Иссык-Кульская область"
     },
     "kg-834": {
-      "kyrgyz": "Чуй облусу",
+      "kyrgyz": "Чүй облусу",
       "items": {
         "potatoes": {
           "1991": 94.3,
@@ -3699,7 +3699,7 @@ var kg_data = {
       "russian": "Картофель"
     },
     "meat": {
-      "kyrgyz": "Эт (тирүүлөй салмакта)",
+      "kyrgyz": "Эт",
       "max": 118.8,
       "english": "Meat (at slaughter weight)",
       "russian": "Мясо (в убойном весе)"
@@ -3711,7 +3711,7 @@ var kg_data = {
       "russian": "Табак (в зачетном весе)"
     },
     "fruits": {
-      "kyrgyz": "Мөмө-жемиш өсүмдүктөр",
+      "kyrgyz": "Мөмө-жемиш жана өсүмдүктөр",
       "max": 59.7,
       "english": "Fruits and berries",
       "russian": "Плоды и ягоды"

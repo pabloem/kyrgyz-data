@@ -18,7 +18,7 @@ var title = {
 var source = {
   'english': 'Source: Stat. Committee of K.R.',
   'russian': 'Источник: Статистический Комитет КР',
-  'kyrgyz': 'Берилме булагы: КР Улуттук статистика комитети'
+  'kyrgyz': 'Булак: КР Улуттук статистика комитети'
 };
 function parse(val) {
     var result,
