@@ -24,6 +24,7 @@ for ln in rd:
     if ln['oblast_code'] not in data:
         data[ln['oblast_code']] = {'items':{}}
         data[ln['oblast_code']]['russian'] = ln['rus_oblast']
+        data[ln['oblast_code']]['kyrgyz'] = ln['kyr_oblast']
         data[ln['oblast_code']]['english'] = ln['oblast']
     if ln['label'] not in data[ln['oblast_code']]['items']:
         data[ln['oblast_code']]['items'][ln['label']] = {}
@@ -31,6 +32,7 @@ for ln in rd:
     if ln['label'] not in items:
         items[ln['label']] = {}
         items[ln['label']]['russian'] = ln['rus_items']
+        items[ln['label']]['kyrgyz'] = ln['kyr_items']
         items[ln['label']]['english'] = ln['items']
         items[ln['label']]['max'] = 0
     for i in years:
