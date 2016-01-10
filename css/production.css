@@ -59,8 +59,8 @@ button { height: auto; font-size:small;}
     max-width: 750px;
     width:80%;
 }
-#year-input { min-width: 50px; width: 7%; }
-#year-no-input { min-width: 50px; width: 7%; }
+#year-input { min-width: 50px; width: 7%; font-size: small;}
+#year-no-input { min-width: 50px; width: 7%; font-size: small;}
 
 .onoffswitch {
     position: relative; width: 90px;
