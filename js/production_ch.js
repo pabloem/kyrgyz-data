@@ -2,6 +2,7 @@ var years = kg_data.years,
     crops = kg_data.crops,
     more = kg_data.more,
     less = kg_data.less,
+    units = kg_data.units,
     kg_data = kg_data.data;
 
 var lang = 'english',
@@ -11,11 +12,13 @@ var lang = 'english',
 
 var title = {
   'english': 'Product: ',
-  'russian': 'Производство: '
+  'russian': 'Производство: ',
+  'kyrgyz': 'Өндүрүү: '
 };
 var source = {
   'english': 'Source: Stat. Committee of K.R.',
-  'russian': 'Источник: Статистический Комитет КР'
+  'russian': 'Источник: Статистический Комитет КР',
+  'kyrgyz': 'Берилме булагы: КР Улуттук статистика комитети'
 };
 function parse(val) {
     var result,
@@ -41,8 +44,12 @@ function get_oblast_crop_list(oblast,crop) {
 
 function refreshChart(crop,language,first) {
   var chart_data = {labels: years},
-      datasets = [], ds, cnt=0;
-  $('#title').html(title[language]+crops[crop][language]);
+      datasets = [], ds, cnt=0,
+      unit = units['default'][language];
+  if(units[crop] !== undefined) {
+    unit = units[crop][language];
+  }
+  $('#title').html(title[language]+crops[crop][language]+" ("+unit+")");
   for(var ob in kg_data) {
     ds = {};
     ds.label = kg_data[ob][language];

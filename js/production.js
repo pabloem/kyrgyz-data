@@ -1,6 +1,7 @@
 var years = kg_data.years,
     crops = kg_data.crops,
     more = kg_data.more,
+    units = kg_data.units,
     less = kg_data.less,
     kg_data = kg_data.data;
 
@@ -24,7 +25,8 @@ function parse(val) {
 }
 var source = {
   'english': 'Source: Stat. Committee of K.R.',
-  'russian': 'Источник: Статистический Комитет КР'
+  'russian': 'Источник: Статистический Комитет КР',
+  'kyrgyz': 'Берилме булагы: КР Улуттук статистика комитети'
 };
 function get_data(item,year,lang,perc) {
   var data = [],
@@ -47,7 +49,10 @@ function get_data(item,year,lang,perc) {
   }
   crop = crops[item][lang];
   max = perc === true ? max_val : crops[item]['max'];
-  var label = perc === true ? " - (%)" : " - (VOL)";
+  //var label = perc === true ? " - (%)" : " - (VOL)";
+  console.log(item + lang);
+  var label = " ("+ (units[item] === undefined ? units['default'][lang] : units[item][lang])+")";
+  if(perc === true) label = " (%)";
   return {data:data, crop:crop, year:year,max:max,label:label};
 }
 function plotMap(fd) {
@@ -59,7 +64,7 @@ function plotMap(fd) {
           text : dt_name+" - "+year+fd.label
         },
         subtitle : {
-            text : 'Source map: <a href="http://code.highcharts.com/mapdata/countries/kg/kg-all.js">Kyrgyzstan</a>'
+            text : ''
         },
         colorAxis: {
           min: 0,
